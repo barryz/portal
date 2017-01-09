@@ -158,6 +158,15 @@
             </div>
 
             <div class="panel panel-default">
+                <div class="panel-heading">Slack Channel Configure: #配置发送至Slack-Channel之后就不会发到联系人的slack账号， 注意：配置的channel必须已经存在且已邀请falcon-bot</div>
+                <div class="panel-body">
+                    报警接收组（在UIC中管理报警组，<a target="_blank" href="{{ data.uic }}/team/all">快捷入口</a>）：
+                    <input class="form-control" id="uic" value="{{ data.tpl.action.uic }}">
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
                 <div class="panel-heading">def callback(): #高级用法，配置了callback地址才会触发回调</div>
                 <div class="panel-body">
                     callback地址（只支持http get方式回调）：

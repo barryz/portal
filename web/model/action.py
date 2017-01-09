@@ -6,15 +6,16 @@ from frame.config import UIC_ADDRESS
 
 class Action(Bean):
     _tbl = 'action'
-    _cols = 'id, uic, url, callback, ' \
+    _cols = 'id, uic, url, callback, slack_channel, ' \
             'before_callback_sms, before_callback_mail, after_callback_sms, after_callback_mail'
 
-    def __init__(self, _id, uic, url, callback,
+    def __init__(self, _id, uic, url, callback, slack_channel, 
                  before_callback_sms, before_callback_mail, after_callback_sms, after_callback_mail):
         self.id = _id
         self.uic = uic
         self.url = url
         self.callback = callback
+        self.slack_channel = slack_channel
         self.before_callback_sms = before_callback_sms
         self.before_callback_mail = before_callback_mail
         self.after_callback_sms = after_callback_sms
@@ -41,6 +42,7 @@ class Action(Bean):
             'uic': self.uic,
             'url': self.url,
             'callback': self.callback,
+            'slack_channel': self.slack_channel,
             'before_callback_sms': self.before_callback_sms,
             'before_callback_mail': self.before_callback_mail,
             'after_callback_sms': self.after_callback_sms,

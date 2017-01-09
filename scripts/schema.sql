@@ -158,6 +158,7 @@ CREATE TABLE `action` (
   `before_callback_mail` TINYINT(4)       NOT NULL DEFAULT '0',
   `after_callback_sms`   TINYINT(4)       NOT NULL DEFAULT '0',
   `after_callback_mail`  TINYINT(4)       NOT NULL DEFAULT '0',
+  `slack_channel`        varchar(30)      NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 )
   ENGINE =InnoDB
